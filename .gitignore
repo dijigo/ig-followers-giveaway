@@ -1,0 +1,14 @@
+# .env dosyasını hariç tut
+.env
+
+# Diğer tipik dosya ve dizinleri hariç tut
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.envrc
+.idea/
+.vscode/
+*.log
+*.sqlite3
+.DS_Store
