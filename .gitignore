@@ -1,6 +1,8 @@
 # .env dosyasını hariç tut
 .env
 
+followers.txt
+
 # Diğer tipik dosya ve dizinleri hariç tut
 __pycache__/
 *.py[cod]

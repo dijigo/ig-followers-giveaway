@@ -1,55 +1,41 @@
-# Instagram Giveaway Script
+```
+# Çekiliş Uygulaması
 
-Bu çekiliş kodu DijiGO Teknoloji tarafından yapılmıştır.
-İletişim: bilgi@dijigo.net
-Web Sitesi: [www.dijigo.net](http://www.dijigo.net)
+Bu Python betiği, bir takipçi listesinden rastgele kazananlar seçmek için kullanılır.
 
-## Amaç
+## Kullanım
 
-Bu kod, belirli bir Instagram hesabının takipçileri arasından rastgele kazananlar ve yedek kazananlar seçmek için kullanılır.
+1. `followers.txt` adlı bir dosya oluşturun ve her satırda bir takipçi kullanıcı adı olacak şekilde takipçi listesini bu dosyaya ekleyin.
+2. Betiği çalıştırın.
+3. Betik, takipçi listesinden 12 kazanan ve 24 yedek seçecektir.
 
-## Kullanılan Kütüphaneler ve Amaçları
+## Gereksinimler
 
-- `instaloader`: Instagram profil bilgilerini ve takipçilerini almak için kullanılır.
-- `secrets`: Kriptografik olarak güvenli rastgele seçimler yapmak için kullanılır.
-- `dotenv`: .env dosyasından ortam değişkenlerini yüklemek için kullanılır.
-- `os`: Ortam değişkenlerine erişim sağlamak için kullanılır.
-- `time`: Gecikme ve zamanlama işlemleri için kullanılır.
-- `tqdm`: Takipçileri alırken ilerleme çubuğu göstermek için kullanılır.
+* Python 3.6 veya üstü
+* `secrets` paketi
 
 ## Kurulum
 
-1. Gerekli Python kütüphanelerini yükleyin:
-    ```sh
-    pip install instaloader python-dotenv tqdm
-    ```
+1. `secrets` paketini yükleyin:
+```bash
+pip install secrets
+```
 
-2. Proje dizininde bir `.env` dosyası oluşturun ve Instagram kullanıcı adı ve şifrenizi ekleyin:
-    ```
-    INSTAGRAM_USERNAME=your_username
-    INSTAGRAM_PASSWORD=your_password
-    ```
+## Çalıştırma
 
-3. Çekilişi başlatmak için aşağıdaki komutu çalıştırın:
-    ```sh
-    python your_script_name.py
-    ```
+1. Terminale veya komut istemine aşağıdaki komutu girin:
+```bash
+python main.py
+```
 
-## .gitignore Dosyası
+## Notlar
 
-Projenizi GitHub'a yüklerken `.env` dosyasını hariç tutmak için `.gitignore` dosyasını eklediğinizden emin olun:
-```plaintext
-# .env dosyasını hariç tut
-.env
+* Betik, takipçileri kriptografik olarak güvenli bir şekilde rastgele seçer.
+* `secrets` paketi, rastgele sayılar üretmek için işletim sistemi tarafından sağlanan rastgele sayı üreticisini kullanır.
+* `followers.txt` dosyası aynı dizinde olmalıdır.
+* Kazananlar ve yedekler, her birinin 2 saniye bekleme süresiyle ayrı ayrı yazdırılır.
 
-# Diğer tipik dosya ve dizinleri hariç tut
-__pycache__/
-*.py[cod]
-*$py.class
-venv/
-.envrc
-.idea/
-.vscode/
-*.log
-*.sqlite3
-.DS_Store
+## Lisans
+
+Bu betik, MIT lisansı altında yayınlanmıştır. Daha fazla bilgi için LICENSE dosyasına bakın.
+```
